@@ -7,3 +7,7 @@ This is a "hack package" for JavaScript Hacks (JS Hacks) building block: http://
 **WHAT DOES IT DO**
 
 What it says on the tin! Shows the folder location of files when you Edit Options and doesn't erase the old file name when you select Select a Different File.
+
+**HOW DOES IT WORK**
+
+Uses XMLHttpRequest for getting the file name
