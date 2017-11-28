@@ -1,0 +1,24 @@
+<hackpackage>
+  <name>Long Names For Files and Don&apos;t Erase the Old File Name</name>
+  <identifier>mhcc_longnames</identifier>
+  <description>Show the folder location of files when you Edit Options and don&apos;t erase the old file name when you select Select a Different File</description>
+  <version>1.0</version>
+  <developerName>Mike Young</developerName>
+  <developerInstitution>MHCC</developerInstitution>
+  <developerURL>http://mhcc.edu</developerURL>
+  <developerEmail>mike.young@mhcc.edu</developerEmail>
+  <hook>tag.learningSystemPage.start</hook>
+  <restrictions>
+    <restriction>
+      <type>URL</type>
+      <value>.*/webapps/blackboard/execute/content/file</value>
+      <inverse>false</inverse>
+    </restriction>
+    <restriction>
+      <type>REQUEST_PARAMETER</type>
+      <value>cmd=edit</value>
+      <inverse>false</inverse>
+    </restriction>
+  </restrictions>
+  <resources/>
+</hackpackage>

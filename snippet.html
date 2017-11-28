@@ -1,0 +1,21 @@
+<!-- This snippet binds a function to the "dom:loaded" event.
+You can put your own javascript into the function, or replace
+the entire snippet. -->
+<script type="text/javascript">
+    Event.observe(document,"dom:loaded", function() {
+        var idown = new XMLHttpRequest();
+        idown.open('GET', document.getElementById('sourceFile_selectedCSFile').value, true); 
+        idown.onreadystatechange = function () {
+            if (idown.readyState == 4) {
+                document.getElementById('sourceFile_selectedFileName').innerHTML = idown.responseURL.split(document.getElementsByClassName('courseId')[0].innerHTML+'/')[1];
+            }
+        };
+        idown.send(null);
+        
+        createFile.afterRemove = function ()
+        {
+            //don't do anything, don't get rid of the old value, sheesh
+        }
+    
+    });
+</script>
